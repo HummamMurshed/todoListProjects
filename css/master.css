@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(30, 0, 77);
+}
+i {
+  color: white;
+  font-size: 2rem;
+}
+.circular-buttons {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 766px) {
+  .circular-buttons {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  i {
+    color: white;
+    font-size: 1rem;
+  }
+}
+.parent {
+  direction: rtl;
+}
+.container {
+  /* height: 600px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  /* background-color: white; */
+}
+
+.container .task-box {
+  width: 60%;
+  margin-top: 30px;
+  background-color: rgb(239, 239, 239);
+}
+@media (max-width: 766px) {
+  .container .task-box {
+    width: 80%;
+    margin-top: 30px;
+    background-color: rgb(239, 239, 239);
+  }
+}
+.container .task-box .header {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgb(92, 52, 155);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.container .task-box .header h1 {
+  display: inline;
+}
+
+.container .task-box .header button {
+  float: right;
+  margin-right: 10px;
+  background-color: white;
+  border: none;
+  font-size: 2rem;
+  box-shadow: 0 3px 5px rgba(168, 168, 168, 0.38);
+  font-weight: bold;
+}
+button img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Start Content */
+.task-board {
+  /* font-size: 2rem; */
+  padding: 10px;
+}
+.container .content {
+  padding: 5px 20px 3px;
+}
+
+.container .content .task {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid black;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+.container .content .task:hover {
+  box-shadow: 0 3px 15px rgba(97, 97, 97, 0.54);
+}
+.container .task .task-info {
+  width: 65%;
+}
+.container .task .task-info h2 {
+  margin-bottom: 10px;
+}
+.container .task .task-info .date {
+  display: flex;
+  align-items: center;
+}
+
+.container .task .function {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+}
+.container .task .function .edit,
+.container .task .function .save,
+.container .task .function .delete {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  box-shadow: 0 3px 5px rgba(168, 168, 168, 0.38);
+}
+.container .task .function .edit {
+  background-color: #0075ff;
+  color: white;
+}
+.container .task .function .save {
+  background-color: green;
+
+  color: white;
+}
+
+.cla {
+  width: 15px;
+  height: 15px;
+  margin-left: 3px;
+}
+
+.isdone {
+  background-color: rgb(158, 253, 160);
+}
+
+/* End Content */
